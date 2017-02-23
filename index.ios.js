@@ -1,9 +1,43 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, Button, TouchableHighlight, View, Alert, Dimensions } from 'react-native';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  Button,
+  TouchableHighlight,
+  View,
+  ListView,
+  Image,
+  Alert,
+  Dimensions,
+  AsyncStorage
+} from 'react-native';
 import { Actions, Scene, Router } from 'react-native-router-flux';
 import Camera from 'react-native-camera';
 var RNFS = require('react-native-fs');
 
+//UNIVERSAL FUNCTIONS
+async function createMemory(imagePath) {
+  let date = new Date().getTime().toString();
+  let memoryObject = { date: date, imagePath: imagePath, viewed: 0 };
+  let memoryValue = JSON.stringify(memoryObject)
+
+  try {
+    await AsyncStorage.setItem('memory:' + date, memoryValue);
+  } catch (error) {
+    console.log('ERROR OCURRED CREATING MEMORY');
+  }
+}
+
+async function getMemory(key) {
+  try {
+    let memoryValue = await AsyncStorage.getItem(key);
+    memoryValue = JSON.parse(memoryValue);
+    return memoryValue;
+  } catch (error) {
+    console.log('ERROR OCURRED GETTING MEMORY');
+  }
+}
 
 //HOME
 class Home extends Component {
@@ -18,7 +52,7 @@ class Home extends Component {
       />
       <Button 
       style={{color: '#f00'}}
-      onPress={()=>{console.log('CLICKED TO CAPTURE');Actions.capture()}}
+      onPress={()=>{Actions.capture()}}
       title="Capture Memory"
       />
       </View>
@@ -32,9 +66,9 @@ class Capture extends Component {
   takePicture() {
     this.camera.capture()
       .then((data) => {
-        console.log('TOOK A PHOTO:');
-        console.log(data);
-        // data.path to get JPG path 
+        createMemory(data.path).then(() => {
+          Actions.memories();
+        })
       })
       .catch(err => console.error(err));
   }
@@ -52,22 +86,65 @@ class Capture extends Component {
           type={Camera.constants.Type.front}
           aspect={Camera.constants.Aspect.fill}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
+          <Text onPress={()=>Actions.pop()}>[CANCEL]</Text>
         </Camera>
       </View>
     );
   }
 }
 
+async function getAllMemories() {
+  let memoryKeys = []
+  let memoryValues = []
+  try {
+    //GET ALL KEYS
+    let allKeys = await AsyncStorage.getAllKeys();
+    for (var i = 0; i < allKeys.length; i++) {
+      //GET MEMORY KEYS
+      if (allKeys[i].indexOf('memory') > -1) {
+        memoryKeys.push(allKeys[i])
+      }
+    }
+    //GET VALUES OF MEMORIES
+    for (var i = 0; i < memoryKeys.length; i++) {
+      memoryValues[i] = await getMemory(memoryKeys[i])
+    }
+    return memoryValues
+  } catch (error) {}
+}
+
+const MemoryRow = (props) => (
+  <View>
+    <Text>
+    Date:
+      {props.data.date}
+    </Text>
+    <Text>
+    Image:
+      {props.data.imagePath}
+    </Text>
+    <Text>
+    Viewed:
+      {props.data.viewed}
+    </Text>
+  </View>
+);
 
 //ALL MEMORIES
 class Memories extends Component {
-
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      dataSource: ds.cloneWithRows([]),
-    };
+      dataSource: ds.cloneWithRows(['placeholder'])
+    }
+
+    getAllMemories().then((data) => {
+        this.setState({
+          dataSource: ds.cloneWithRows(data)
+        })
+      })
+      .catch((error) => { console.log(error); })
   }
 
   render() {
@@ -75,13 +152,35 @@ class Memories extends Component {
       <View style={{padding:10, paddingTop:30}}>
        <ListView
         dataSource={this.state.dataSource}
-        renderRow={(rowData) => <Text>{rowData}</Text>}
+        renderRow={(data) => <MemoryRow {...{data}}/>}
+        enableEmptySections={true}
       />
         <Button 
         style={{color: '#f00'}}
         onPress={()=>Actions.capture()}
         title="Capture Memory"
         />
+      </View>
+    );
+  }
+}
+
+//MEMORY VIEW
+class Memory extends Component {
+  render() {
+    return (
+      <View style={{padding:10, paddingTop:30}}>
+      <Text>DETAILED MEMORY VIEW</Text>
+      <Button 
+      style={{color: '#f00'}}
+      onPress={()=>Actions.memories()}
+      title="View Memories"
+      />
+      <Button 
+      style={{color: '#f00'}}
+      onPress={()=>{Actions.capture()}}
+      title="Capture Memory"
+      />
       </View>
     );
   }
