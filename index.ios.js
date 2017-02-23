@@ -113,22 +113,7 @@ async function getAllMemories() {
   } catch (error) {}
 }
 
-const MemoryRow = (props) => (
-  <View>
-    <Text>
-    Date:
-      {props.data.date}
-    </Text>
-    <Text>
-    Image:
-      {props.data.imagePath}
-    </Text>
-    <Text>
-    Viewed:
-      {props.data.viewed}
-    </Text>
-  </View>
-);
+import MemoryRow from './MemoryRow';
 
 //ALL MEMORIES
 class Memories extends Component {
