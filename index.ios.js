@@ -12,108 +12,42 @@ import {
   Dimensions,
   AsyncStorage
 } from 'react-native';
-import { Actions, Scene, Router } from 'react-native-router-flux';
-import Camera from 'react-native-camera';
-var RNFS = require('react-native-fs');
+import { Actions, Scene, Router, ActionConst } from 'react-native-router-flux';
+const RNFS = require('react-native-fs');
 
 //UNIVERSAL FUNCTIONS
-async function createMemory(imagePath) {
-  let date = new Date().getTime().toString();
-  let memoryObject = { date: date, imagePath: imagePath, viewed: 0 };
-  let memoryValue = JSON.stringify(memoryObject)
+import { getAllMemories } from './UniversalFunctions.js'
 
-  try {
-    await AsyncStorage.setItem('memory:' + date, memoryValue);
-  } catch (error) {
-    console.log('ERROR OCURRED CREATING MEMORY');
-  }
-}
-
-async function getMemory(key) {
-  try {
-    let memoryValue = await AsyncStorage.getItem(key);
-    memoryValue = JSON.parse(memoryValue);
-    return memoryValue;
-  } catch (error) {
-    console.log('ERROR OCURRED GETTING MEMORY');
-  }
-}
-
-//HOME
-class Home extends Component {
-  render() {
-    return (
-      <View style={{padding:10, paddingTop:30}}>
-      <Text>MAIN MENU HERE?</Text>
-      <Button 
-      style={{color: '#f00'}}
-      onPress={()=>Actions.memories()}
-      title="View Memories"
-      />
-      <Button 
-      style={{color: '#f00'}}
-      onPress={()=>{Actions.capture()}}
-      title="Capture Memory"
-      />
-      </View>
-    );
-  }
-}
-
-
-//CAPTURE
-class Capture extends Component {
-  takePicture() {
-    this.camera.capture()
-      .then((data) => {
-        createMemory(data.path).then(() => {
-          Actions.memories();
-        })
-      })
-      .catch(err => console.error(err));
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Camera
-          ref={(cam) => {
-            this.camera = cam;
-          }}
-          style={styles.preview}
-          captureTarget={Camera.constants.CaptureTarget.disk}
-          captureQuality={Camera.constants.CaptureQuality.medium}
-          type={Camera.constants.Type.front}
-          aspect={Camera.constants.Aspect.fill}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
-          <Text onPress={()=>Actions.pop()}>[CANCEL]</Text>
-        </Camera>
-      </View>
-    );
-  }
-}
-
-async function getAllMemories() {
-  let memoryKeys = []
-  let memoryValues = []
-  try {
-    //GET ALL KEYS
-    let allKeys = await AsyncStorage.getAllKeys();
-    for (var i = 0; i < allKeys.length; i++) {
-      //GET MEMORY KEYS
-      if (allKeys[i].indexOf('memory') > -1) {
-        memoryKeys.push(allKeys[i])
-      }
-    }
-    //GET VALUES OF MEMORIES
-    for (var i = 0; i < memoryKeys.length; i++) {
-      memoryValues[i] = await getMemory(memoryKeys[i])
-    }
-    return memoryValues
-  } catch (error) {}
-}
-
+//PAGES
 import MemoryRow from './MemoryRow';
+import MemoryView from './MemoryView';
+import Capture from './Capture';
+
+//HOME PAGE
+class Home extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <Image source={require('./resources/ui/home_back@2x.jpg')} style={{flex: 1}}>
+        <View style={{padding:10, paddingTop:30}}>
+          <Button 
+          style={{color: '#f00'}}
+          onPress={()=>Actions.memories()}
+          title="View Memories"
+          />
+          <Button 
+          style={{color: '#f00'}}
+          onPress={()=>{Actions.capture()}}
+          title="Capture Memory"
+          />
+        </View>
+      </Image>
+    );
+  }
+}
 
 //ALL MEMORIES
 class Memories extends Component {
@@ -121,15 +55,19 @@ class Memories extends Component {
     super(props);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      dataSource: ds.cloneWithRows(['placeholder'])
+      dataSource: ds.cloneWithRows(['placeholder']),
+      localMemories: []
     }
 
     getAllMemories().then((data) => {
-        this.setState({
-          dataSource: ds.cloneWithRows(data)
-        })
+      this.setState({
+        dataSource: ds.cloneWithRows(data),
+        localMemories: data
       })
-      .catch((error) => { console.log(error); })
+    }).catch((error) => { console.log('error',error); })
+  }
+
+  componentDidMount(){
   }
 
   render() {
@@ -149,28 +87,6 @@ class Memories extends Component {
     );
   }
 }
-
-//MEMORY VIEW
-class Memory extends Component {
-  render() {
-    return (
-      <View style={{padding:10, paddingTop:30}}>
-      <Text>DETAILED MEMORY VIEW</Text>
-      <Button 
-      style={{color: '#f00'}}
-      onPress={()=>Actions.memories()}
-      title="View Memories"
-      />
-      <Button 
-      style={{color: '#f00'}}
-      onPress={()=>{Actions.capture()}}
-      title="Capture Memory"
-      />
-      </View>
-    );
-  }
-}
-
 
 //DEFAULT RENDER
 export default class theFM extends Component {
@@ -192,31 +108,14 @@ export default class theFM extends Component {
         />
         <Scene key="memories"
           component={Memories}
+          type={ActionConst.RESET}
+        />
+        <Scene key="memoryView"
+          component={MemoryView}
         />
     </Router>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  preview: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    height: Dimensions.get('window').height,
-    width: Dimensions.get('window').width
-  },
-  capture: {
-    flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
-    padding: 10,
-    margin: 40
-  }
-});
 
 AppRegistry.registerComponent('theFM', () => theFM);

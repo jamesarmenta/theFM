@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
+import { memoryViewed } from './UniversalFunctions.js'
+import { Actions, Scene, Router } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,19 +24,33 @@ const styles = StyleSheet.create({
 });
 
 const dateFormat = {
-    weekday: "long", year: "numeric", month: "short",
-    day: "numeric", hour: "2-digit", minute: "2-digit"
+  weekday: "long",
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+  hour: "2-digit",
+  minute: "2-digit"
 }
+  /*
+  receives object 
+  {
+    date: epoch date in ms (string), 
+    imagePage: path to image in app documents (string), 
+    viewed: number of views (int)
+  }
+  */
 
 const MemoryRow = (props) => (
-  <View style={styles.container}>
-    <Image source={{ uri: props.data.imagePath}} style={{width: 10, height: 10,}} />
-    <Text style={styles.text}>
-      {new Date(parseInt(props.data.date)).toLocaleTimeString("en-us", dateFormat)}
-      {'\n'}
-      Viewed {props.data.viewed} times
-    </Text>
+  <TouchableWithoutFeedback onPress={()=>{props.data.viewed++;memoryViewed(props.data.date);Actions.memoryView(props.data)}}>
+  <View style={styles.container} >
+      <Image source={{ uri: props.data.imagePath}} style={{width: 10, height: 10,}} />
+      <Text style={styles.text}>
+        {new Date(parseInt(props.data.date)).toLocaleTimeString("en-us", dateFormat)}
+        {'\n'}
+        Viewed {props.data.viewed} times
+      </Text>
   </View>
+  </TouchableWithoutFeedback>
 );
 
 export default MemoryRow
