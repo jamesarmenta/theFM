@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, Button } from 'react-native';
 import { Actions, Scene, Router } from 'react-native-router-flux';
-const resolveAssetSource = require('resolveAssetSource');
+import { memoryViewed } from './UniversalFunctions.js'
 import { Surface } from 'gl-react-native';
 import HueRotate from './Shader.js';
 const RNFS = require('react-native-fs');
@@ -35,51 +35,68 @@ const dateFormat = {
   minute: "2-digit"
 }
 
+const blankHole = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+
 class MemoryView extends Component {
   constructor(props) {
     super(props)
+
+    memoryViewed(this.props.date);
+
     this.state = {
       memoryDate: this.props.date,
-      memoryImage: this.props.imagePath,
-      shaderHole: HOLES[Math.round(Math.random()*HOLES.length)],
-      shaderOffset: parseFloat((Math.random() * 2) - 1),
+      shaderImage: this.props.imagePath,
+      shaderHole: HOLES[Math.round(Math.random() * HOLES.length)],
+      shaderHole2: HOLES[Math.round(Math.random() * HOLES.length)],
+      memoryViews: this.props.viewed
     }
+
+    console.log(this.props.imagePath);
   }
 
-
   refreshMemory = () => {
-    // this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: this.state.memoryImage }).then(uri => {
-    //refresh state with new image and shader holes
-    this.setState({
-      memoryImage: this.props.imagePath,
-      shaderHole: HOLES[Math.round(Math.random()*HOLES.length)],
-      shaderOffset: parseFloat((Math.random() * 2) - 1)
-    })
+    //prevent refresh until complete
+    this.setState({ refreshDisabled: true });
+    //capture frame, replace current image
+    this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: this.state.shaderImage })
+      .then(uri => {
+          //alternate case so as to force state update
+          var imagePath = this.state.shaderImage;
+          imagePath = (imagePath == imagePath.toUpperCase()) ? imagePath.toLowerCase() : imagePath.toUpperCase();
+          this.setState({
+            shaderImage: imagePath || this.state.shaderImage ,
+            shaderHole: HOLES[Math.round(Math.random() * (HOLES.length - 1))],
+            shaderHole2: HOLES[Math.round(Math.random() * HOLES.length)],
+            refreshDisabled: false,
+            memoryViews: this.state.memoryViews + 1
+          });
+
+          memoryViewed(this.props.date);
+      });
   }
 
   render() {
     return (
       <View style={styles.container}>
-
-      <Surface width={300} height={500}>
-        <HueRotate image={{uri: this.props.imagePath}} hole={this.state.shaderHole}></HueRotate>
+      <Surface width={300} height={500} ref={"currentMemory"}>
+        <HueRotate image={{uri: this.state.shaderImage}} hole={this.state.shaderHole || blankHole} holetwo={this.state.shaderHole2 || blankHole}></HueRotate>
       </Surface>
 
       <Text style={styles.text}>
         {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
         {'\n'}
-        Viewed {this.props.viewed} times
+        Viewed {this.state.memoryViews} times
       </Text>
-      <Button 
-          style={{color: '#f00'}}
-          onPress={()=>this.refreshMemory()}
-          title="Refresh"
-          />
       <Button 
           style={{color: '#f00'}}
           onPress={()=>Actions.memories()}
           title="Back"
           />
+      <Button
+        disabled={this.state.refreshDisabled}
+        onPress = {() => this.refreshMemory()}
+        title = "Refresh?"
+      />
     </View>
     );
   }

@@ -58,7 +58,7 @@ class Capture extends Component {
           }}
           style={styles.preview}
           captureTarget={Camera.constants.CaptureTarget.disk}
-          captureQuality={Camera.constants.CaptureQuality.medium}
+          captureQuality={Camera.constants.CaptureQuality.low}
           type={Camera.constants.Type.front}
           aspect={Camera.constants.Aspect.fill}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
