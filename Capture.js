@@ -14,8 +14,7 @@ import {
 } from 'react-native';
 import { Actions, Scene, Router } from 'react-native-router-flux';
 import Camera from 'react-native-camera';
-import { createMemory } from './UniversalFunctions.js'
-
+import { createMemory } from './UniversalFunctions.js';
 
 const styles = StyleSheet.create({
   container: {

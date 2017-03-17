@@ -4,22 +4,26 @@ import {
   StyleSheet,
   Text,
   Button,
-  TouchableHighlight,
+  TouchableWithoutFeedback,
   View,
   ListView,
   Image,
   Alert,
   Dimensions,
+  StatusBar,
   AsyncStorage
 } from 'react-native';
 import { Actions, Scene, Router, ActionConst } from 'react-native-router-flux';
 const RNFS = require('react-native-fs');
 
 //UNIVERSAL FUNCTIONS
-import { getAllMemories } from './UniversalFunctions.js'
+import { getAllMemories } from './UniversalFunctions.js';
+
+//UI
+import { CameraButton, ListButton } from './CustomButtons.js';
+import MemoryRow from './MemoryRow';
 
 //PAGES
-import MemoryRow from './MemoryRow';
 import MemoryView from './MemoryView';
 import Capture from './Capture';
 
@@ -31,20 +35,17 @@ class Home extends Component {
 
   render() {
     return (
-      <Image source={require('./resources/ui/home_back@2x.jpg')} style={{flex: 1}}>
-        <View style={{padding:10, paddingTop:30}}>
-          <Button 
-          style={{color: '#f00'}}
-          onPress={()=>Actions.memories()}
-          title="View Memories"
-          />
-          <Button 
-          style={{color: '#f00'}}
-          onPress={()=>{Actions.capture()}}
-          title="Capture Memory"
-          />
-        </View>
+      <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0)'}}>
+      <StatusBar hidden={true} />
+      <Image source={require('./resources/ui/default-568h@2x.png')} 
+      style={{width: Dimensions.width, flex: 1, flexDirection: 'column', justifyContent: 'center',  padding:10, paddingTop:30}}  
+      resizeMode={"cover"}>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <CameraButton style={{alignSelf: 'center'}}/>
+          <ListButton style={{alignSelf: 'center'}}/>
+      </View>
       </Image>
+      </View>
     );
   }
 }
@@ -64,10 +65,7 @@ class Memories extends Component {
         dataSource: ds.cloneWithRows(data),
         localMemories: data
       })
-    }).catch((error) => { console.log('error',error); })
-  }
-
-  componentDidMount(){
+    }).catch((error) => { console.log('error', error); })
   }
 
   render() {
@@ -108,7 +106,6 @@ export default class theFM extends Component {
         />
         <Scene key="memories"
           component={Memories}
-          type={ActionConst.RESET}
         />
         <Scene key="memoryView"
           component={MemoryView}
