@@ -7,14 +7,14 @@ export class CameraButton extends Component {
     super(props)
 
     this.state = {
-      cameraButton: require('./resources/ui/camera_button@2x.png')
+      cameraButton: require('./resources/ui/camera_button.png')
     }
   }
 
   changeCameraButton() {
-    this.setState({ cameraButton: require('./resources/ui/camera_button_press@2x.png') });
+    this.setState({ cameraButton: require('./resources/ui/camera_button_press.png') });
     setTimeout(() => {
-      this.setState({ cameraButton: require('./resources/ui/camera_button@2x.png') });
+      this.setState({ cameraButton: require('./resources/ui/camera_button.png') });
     }, 1000)
   }
 
@@ -32,14 +32,14 @@ export class ListButton extends Component {
     super(props)
 
     this.state = {
-      listButton: require('./resources/ui/list_button@2x.png')
+      listButton: require('./resources/ui/list_button.png')
     }
   }
 
   changeListButton() {
-    this.setState({ listButton: require('./resources/ui/list_button_press@2x.png') });
+    this.setState({ listButton: require('./resources/ui/list_button_press.png') });
     setTimeout(() => {
-      this.setState({ listButton: require('./resources/ui/list_button@2x.png') });
+      this.setState({ listButton: require('./resources/ui/list_button.png') });
     }, 1000)
   }
 

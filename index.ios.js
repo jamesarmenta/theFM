@@ -36,15 +36,15 @@ class Home extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0)'}}>
-      <StatusBar hidden={true} />
-      <Image source={require('./resources/ui/default-568h@2x.png')} 
-      style={{width: Dimensions.width, flex: 1, flexDirection: 'column', justifyContent: 'center',  padding:10, paddingTop:30}}  
-      resizeMode={"cover"}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-          <CameraButton style={{alignSelf: 'center'}}/>
-          <ListButton style={{alignSelf: 'center'}}/>
-      </View>
-      </Image>
+        <StatusBar hidden={true} />
+        <Image source={require('./resources/ui/default-568h.png')} 
+        style={{width: Dimensions.width, flex: 1, flexDirection: 'column', justifyContent: 'center',  padding:10, paddingTop:30}}  
+        resizeMode={"cover"}>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+            <CameraButton style={{alignSelf: 'center'}}/>
+            <ListButton style={{alignSelf: 'center'}}/>
+        </View>
+        </Image>
       </View>
     );
   }
@@ -70,17 +70,20 @@ class Memories extends Component {
 
   render() {
     return (
-      <View style={{padding:10, paddingTop:30}}>
-       <ListView
-        dataSource={this.state.dataSource}
-        renderRow={(data) => <MemoryRow {...{data}}/>}
-        enableEmptySections={true}
-      />
-        <Button 
-        style={{color: '#f00'}}
-        onPress={()=>Actions.capture()}
-        title="Capture Memory"
+      <View style={{flex: 1, flexDirection: 'column', paddingTop: 10}}>
+        <StatusBar hidden={true} />
+        <Image source={require('./resources/ui/list_header.png')} 
+        // height for this image is 'hacky' 
+        style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width*.3515, zIndex: 999}}
+        resizeMode={'contain'}
         />
+         <ListView
+          dataSource={this.state.dataSource}
+          renderRow={(data) => <MemoryRow {...{data}}/>}
+          enableEmptySections={true}
+          style={{marginTop: -30, paddingTop: 10, zIndex: 0}}
+        />
+        <Image source={require('./resources/ui/itemlistfooter.png')} style={{position: 'absolute', bottom: 10, width: Dimensions.get('window').width}} />
       </View>
     );
   }
