@@ -89,7 +89,7 @@ class MemoryView extends Component {
       </Text>
       <Button 
           style={{color: '#f00'}}
-          onPress={()=>Actions.memories()}
+          onPress={()=>Actions.pop({refresh: {}})}
           title="Back"
           />
       <Button

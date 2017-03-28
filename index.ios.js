@@ -77,13 +77,15 @@ class Memories extends Component {
         style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width*.3515, zIndex: 999}}
         resizeMode={'contain'}
         />
+        <View style={{height: Dimensions.get('window').height - 232, borderBottomWidth: 2, borderColor: '#B6B5B5'}}> 
          <ListView
           dataSource={this.state.dataSource}
           renderRow={(data) => <MemoryRow {...{data}}/>}
           enableEmptySections={true}
           style={{marginTop: -30, paddingTop: 10, zIndex: 0}}
         />
-        <Image source={require('./resources/ui/itemlistfooter.png')} style={{position: 'absolute', bottom: 10, width: Dimensions.get('window').width}} />
+        </View>
+        <Image source={require('./resources/ui/itemlistfooter.png')} style={{position: 'absolute', bottom: 0, width: Dimensions.get('window').width}} />
       </View>
     );
   }
