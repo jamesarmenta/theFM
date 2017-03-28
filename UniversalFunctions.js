@@ -53,10 +53,11 @@ async function setStorageItem(key,value){
   }
 }
 
-async function memoryViewed(date) {
+async function memoryViewed(date, newPath) {
   let currentMemory = await getStorageItem('memory:' + date);
   let newViews = parseInt(currentMemory.viewed) + 1;
   currentMemory.viewed = newViews;
+  currentMemory.imagePath = newPath;
   setStorageItem('memory:'+date,currentMemory)
 }
 

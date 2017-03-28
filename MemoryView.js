@@ -57,21 +57,29 @@ class MemoryView extends Component {
   refreshMemory = () => {
     //prevent refresh until complete
     this.setState({ refreshDisabled: true });
-    //capture frame, replace current image
-    this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: this.state.shaderImage })
-      .then(uri => {
-          //alternate case so as to force state update
-          var imagePath = this.state.shaderImage;
-          imagePath = (imagePath == imagePath.toUpperCase()) ? imagePath.toLowerCase() : imagePath.toUpperCase();
-          this.setState({
-            shaderImage: imagePath || this.state.shaderImage ,
-            shaderHole: HOLES[Math.round(Math.random() * (HOLES.length - 1))],
-            shaderHole2: HOLES[Math.round(Math.random() * HOLES.length)],
-            refreshDisabled: false,
-            memoryViews: this.state.memoryViews + 1
-          });
 
-          memoryViewed(this.props.date);
+    var oldPath = this.state.shaderImage;
+    var newPath = this.state.shaderImage.replace(/\d{0,3}\.jpg/, (this.state.memoryViews+1) + '.jpg');
+
+    //capture frame, replace current image
+    this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: newPath })
+      .then(uri => {
+        //alternate case so as to force state update
+        this.setState({
+          shaderImage: newPath,
+          shaderHole: HOLES[Math.round(Math.random() * (HOLES.length - 1))],
+          shaderHole2: HOLES[Math.round(Math.random() * HOLES.length)],
+          refreshDisabled: false,
+          memoryViews: this.state.memoryViews + 1
+        });
+        memoryViewed(this.props.date, newPath);
+
+        //delete old file
+        RNFS.unlink(oldPath)
+          // `unlink` will throw an error, if the item to unlink does not exist
+          .catch((err) => {
+            console.log(err.message);
+          });
       });
   }
 
