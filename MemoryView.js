@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, Button } from 'react-native';
-import { Actions, Scene, Router } from 'react-native-router-flux';
+import { View, Text, StyleSheet, Image, Button, Dimensions } from 'react-native';
+import { Actions, Scene, Router, ActionConst } from 'react-native-router-flux';
 import { memoryViewed } from './UniversalFunctions.js'
 import { Surface } from 'gl-react-native';
 import HueRotate from './Shader.js';
 const RNFS = require('react-native-fs');
 const HOLES = require('./Holes.js');
 
+//UI
+import { CameraButton, ListButton, RefreshButton } from './CustomButtons.js';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     alignItems: 'center',
     borderBottomWidth: 1,
     borderBottomColor: '#000'
@@ -41,7 +43,7 @@ class MemoryView extends Component {
   constructor(props) {
     super(props)
 
-    memoryViewed(this.props.date);
+    memoryViewed(this.props.date, this.props.imagePath);
 
     this.state = {
       memoryDate: this.props.date,
@@ -59,7 +61,7 @@ class MemoryView extends Component {
     this.setState({ refreshDisabled: true });
 
     var oldPath = this.state.shaderImage;
-    var newPath = this.state.shaderImage.replace(/\d{0,3}\.jpg/, (this.state.memoryViews+1) + '.jpg');
+    var newPath = this.state.shaderImage.replace(/\d{0,3}\.jpg/, (this.state.memoryViews + 1) + '.jpg');
 
     //capture frame, replace current image
     this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: newPath })
@@ -86,25 +88,35 @@ class MemoryView extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Surface width={300} height={500} ref={"currentMemory"}>
+      <Image style={{width: 400, height: 500}} source={{uri: this.state.shaderImage}}>
+      <Surface width={400} height={500} ref={"currentMemory"}>
         <HueRotate image={{uri: this.state.shaderImage}} hole={this.state.shaderHole || blankHole} holetwo={this.state.shaderHole2 || blankHole}></HueRotate>
       </Surface>
+      </Image>
+      <Image style={{position: 'absolute', width: Dimensions.get('window').width, height: Dimensions.get('window').height}} source={require('./resources/ui/memory_view.png')}>
+      </Image>
+
+
 
       <Text style={styles.text}>
+      {/*
         {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
-        {'\n'}
         Viewed {this.state.memoryViews} times
+      */}
       </Text>
-      <Button 
-          style={{color: '#f00'}}
-          onPress={()=>Actions.pop({refresh: {}})}
-          title="Back"
+      <View style={{position: 'absolute', bottom: 75, alignItems: 'center', alignSelf: 'flex-start', padding: 12}}>
+        {/*<Button
+          disabled={this.state.refreshDisabled}
+          onPress = {() => this.refreshMemory()}
+          title = "Refresh?"
+        />*/}
+        <RefreshButton 
+          disabled={this.state.refreshDisabled}
+          onPress = {() => this.refreshMemory()}
           />
-      <Button
-        disabled={this.state.refreshDisabled}
-        onPress = {() => this.refreshMemory()}
-        title = "Refresh?"
-      />
+        <ListButton style={{marginLeft: 10, marginBottom: -20}} actionsObject={{type: ActionConst.POP_AND_REPLACE}}/>
+        <CameraButton/>
+      </View>
     </View>
     );
   }

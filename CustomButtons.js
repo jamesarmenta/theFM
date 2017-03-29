@@ -31,6 +31,11 @@ export class ListButton extends Component {
   constructor(props) {
     super(props)
 
+    if(!this.props.actionsObject){
+      console.log('no object');
+      this.props.actionsObject = {};
+    }
+
     this.state = {
       listButton: require('./resources/ui/list_button.png')
     }
@@ -45,8 +50,34 @@ export class ListButton extends Component {
 
   render() {
     return (
-    <TouchableWithoutFeedback onPress={()=>{this.changeListButton(); Actions.memories()}}>
+    <TouchableWithoutFeedback onPress={()=>{this.changeListButton(); Actions.memories(this.props.actionsObject)}}>
       <Image source={this.state.listButton} style={this.props.style} />
+    </TouchableWithoutFeedback>
+    )
+  }
+}
+
+export class RefreshButton extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      refreshButton: require('./resources/ui/refresh_button.png')
+    }
+  }
+
+  changeRefreshButton() {
+    if(this.props.disabled){return}
+    this.setState({ refreshButton: require('./resources/ui/refresh_button_pressed.png') });
+    setTimeout(() => {
+      this.setState({ refreshButton: require('./resources/ui/refresh_button.png') });
+    }, 150)
+  }
+
+  render() {
+    return (
+    <TouchableWithoutFeedback onPress={()=>{this.changeRefreshButton(); this.props.onPress()}}>
+      <Image source={this.state.refreshButton} style={this.props.style} />
     </TouchableWithoutFeedback>
     )
   }
