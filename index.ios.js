@@ -61,6 +61,17 @@ class Memories extends Component {
     }
 
     getAllMemories().then((data) => {
+      //sort newest to oldest
+      data = data.sort((a, b) => {
+        if (a.date > b.date) {
+          return -1
+        }
+        if (a.date < b.date) {
+          return 1
+        }
+        return 0
+      });
+
       this.setState({
         dataSource: ds.cloneWithRows(data),
         localMemories: data
@@ -80,7 +91,7 @@ class Memories extends Component {
         <View style={{height: Dimensions.get('window').height - 232, borderBottomWidth: 2, borderColor: '#B6B5B5'}}> 
          <ListView
           dataSource={this.state.dataSource}
-          renderRow={(data) => <MemoryRow {...{data}}/>}
+          renderRow={(data,sectionID,rowID) => <MemoryRow {...{data,rowID}}/>}
           enableEmptySections={true}
           style={{marginTop: -30, paddingTop: 10, zIndex: 0}}
         />

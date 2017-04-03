@@ -53,6 +53,7 @@ const dateFormat = {
 const MemoryRow = (props) => (
   <TouchableWithoutFeedback onPress={()=>{props.data.viewed++;Actions.memoryView(props.data)}}>
   <View style={styles.container} >
+      <Text style={{paddingLeft: 6, paddingTop: 6, color: '#B6B5B5'}}>{parseInt(props.rowID)+1}</Text>
       <Text style={styles.creationDate}>
         {new Date(parseInt(props.data.date)).toLocaleTimeString("en-us", dateFormat)}
       </Text>

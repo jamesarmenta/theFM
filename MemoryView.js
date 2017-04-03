@@ -18,20 +18,20 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000'
   },
   text: {
-    marginLeft: 12,
-    fontSize: 16,
-  },
-  photo: {
-    height: 40,
-    width: 40,
-    borderRadius: 20,
-  },
+    width: Dimensions.get('window').width/2.6,
+    alignSelf: 'flex-end',
+    textAlign: 'left',
+    marginTop: 20,
+    marginRight: 36,
+    fontSize: 14,
+    backgroundColor: 'rgba(0,0,0,0)',
+    color: '#fff'
+  }
 });
 
 const dateFormat = {
-  weekday: "long",
   year: "numeric",
-  month: "short",
+  month: "long",
   day: "numeric",
   hour: "2-digit",
   minute: "2-digit"
@@ -88,28 +88,21 @@ class MemoryView extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image style={{width: 400, height: 500}} source={{uri: this.state.shaderImage}}>
-      <Surface width={400} height={500} ref={"currentMemory"}>
+      <Image style={{width: Dimensions.get('window').width-20, height: Dimensions.get('window').width-20}} source={{uri: this.state.shaderImage}}>
+      <Surface width={Dimensions.get('window').width-20} height={Dimensions.get('window').width-20} ref={"currentMemory"}>
         <HueRotate image={{uri: this.state.shaderImage}} hole={this.state.shaderHole || blankHole} holetwo={this.state.shaderHole2 || blankHole}></HueRotate>
       </Surface>
       </Image>
       <Image style={{position: 'absolute', width: Dimensions.get('window').width, height: Dimensions.get('window').height}} source={require('./resources/ui/memory_view.png')}>
       </Image>
 
-
-
       <Text style={styles.text}>
-      {/*
+        Refreshed: {this.state.memoryViews} times {'\n\n'}
+        Date Captured: {'\n'}
         {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
-        Viewed {this.state.memoryViews} times
-      */}
       </Text>
+
       <View style={{position: 'absolute', bottom: 75, alignItems: 'center', alignSelf: 'flex-start', padding: 12}}>
-        {/*<Button
-          disabled={this.state.refreshDisabled}
-          onPress = {() => this.refreshMemory()}
-          title = "Refresh?"
-        />*/}
         <RefreshButton 
           disabled={this.state.refreshDisabled}
           onPress = {() => this.refreshMemory()}
