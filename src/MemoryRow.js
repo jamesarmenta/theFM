@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
-import { Actions, Scene, Router } from 'react-native-router-flux';
+import { Actions, ActionConst, Scene, Router } from 'react-native-router-flux';
 
 const styles = StyleSheet.create({
   container: {
@@ -51,7 +51,7 @@ const dateFormat = {
   */
 
 const MemoryRow = (props) => (
-  <TouchableWithoutFeedback onPress={()=>{props.data.viewed++;Actions.memoryView(props.data)}}>
+  <TouchableWithoutFeedback onPress={()=>{props.data.viewed++;props.data.type = ActionConst.RESET; Actions.memoryView(props.data)}}>
   <View style={styles.container} >
       <Text style={{paddingLeft: 6, paddingTop: 6, color: '#B6B5B5'}}>{parseInt(props.rowID)+1}</Text>
       <Text style={styles.creationDate}>

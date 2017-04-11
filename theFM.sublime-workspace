@@ -1,0 +1,1472 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"refres",
+				"refreshMemory"
+			],
+			[
+				"Ac",
+				"ActionConst"
+			],
+			[
+				"Action",
+				"ActionConst〔variable〕"
+			],
+			[
+				"Actio",
+				"ActionConst"
+			],
+			[
+				"camera",
+				"cameraType"
+			],
+			[
+				"ali",
+				"alignSelf〔variable〕"
+			],
+			[
+				"Imag",
+				"ImageEditor〔variable〕"
+			],
+			[
+				"Image",
+				"ImageEditor"
+			],
+			[
+				"backgrou",
+				"backgroundColor〔variable〕"
+			],
+			[
+				"sear",
+				"searchInput"
+			],
+			[
+				"search",
+				"searchInput"
+			],
+			[
+				"searc",
+				"searchTimer"
+			],
+			[
+				"deta",
+				"detail_back2.png\tw:320 h:568"
+			],
+			[
+				"u",
+				"ui/"
+			],
+			[
+				"al",
+				"align-content"
+			],
+			[
+				"alig",
+				"alignItems〔variable〕"
+			],
+			[
+				"align",
+				"alignSelf〔variable〕"
+			],
+			[
+				"padd",
+				"paddingTop\tStyle CSS"
+			],
+			[
+				"Touch",
+				"TouchableWithoutFeedback"
+			],
+			[
+				"change",
+				"changeListButton"
+			],
+			[
+				"setT",
+				"setTimeout〔function〕"
+			],
+			[
+				"flex",
+				"flexDirection\tStyle CSS"
+			],
+			[
+				"memory",
+				"memoryViews"
+			],
+			[
+				"toUp",
+				"toUpperCase(): string\tString"
+			],
+			[
+				"shader",
+				"shaderImage"
+			],
+			[
+				"ho",
+				"Holes.js"
+			],
+			[
+				"sh",
+				"shaderHole"
+			],
+			[
+				"r",
+				"round〔function〕"
+			],
+			[
+				"re",
+				"resources/"
+			],
+			[
+				"He",
+				"HelloGL.js"
+			],
+			[
+				"dist",
+				"distortImage"
+			],
+			[
+				"create",
+				"createMemory"
+			],
+			[
+				"curren",
+				"currentMemory"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"memor",
+				"memoryValues"
+			],
+			[
+				"JSON",
+				"JSON.stringify( value: any, replacer?: any, space?: any ): string\tJSON"
+			],
+			[
+				"getAl",
+				"getAllMemories"
+			],
+			[
+				"me",
+				"memoryValue"
+			],
+			[
+				"to",
+				"toString(): string\tString"
+			],
+			[
+				"clone",
+				"cloneWithRows"
+			],
+			[
+				"Tou",
+				"TouchableHighlight"
+			],
+			[
+				"forEa",
+				"forEach( callbackfn: Function, thisArg?: any ): Array\tArray"
+			],
+			[
+				"padding",
+				"paddingBottom\tStyle CSS"
+			],
+			[
+				"algin",
+				"alignSelf\tStyle CSS"
+			],
+			[
+				"defau",
+				"defaultView"
+			],
+			[
+				"Text",
+				"TextInput"
+			],
+			[
+				"fake",
+				"fakeHref"
+			],
+			[
+				"min",
+				"minVisitDuration"
+			],
+			[
+				"max",
+				"maxVisitDuration"
+			],
+			[
+				"averag",
+				"averageVisitDuration"
+			],
+			[
+				"aver",
+				"averageVisitDuration"
+			],
+			[
+				"items",
+				"itemsCollection"
+			],
+			[
+				"db",
+				"dbFindOne"
+			],
+			[
+				"load",
+				"loadContentArea"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"ajax",
+				"ajaxifyLinks"
+			],
+			[
+				"random",
+				"randomIndex"
+			],
+			[
+				"Date",
+				"Date.now(): Date\tDate"
+			],
+			[
+				"home",
+				"homeItems"
+			],
+			[
+				"overlapp",
+				"overlapping-left"
+			],
+			[
+				"overlap",
+				"overlapping-right"
+			],
+			[
+				"upda",
+				"updateLocal"
+			],
+			[
+				"update",
+				"updatePageView"
+			],
+			[
+				"facu",
+				"facultyPerson"
+			],
+			[
+				"remov",
+				"removeClass"
+			],
+			[
+				"connect",
+				"connectMongo"
+			],
+			[
+				"TEX",
+				"TEXTCOLORLIGHT"
+			],
+			[
+				"document",
+				"documentUpdate"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"for",
+				"for-k"
+			],
+			[
+				"item",
+				"item-size\t home.scss"
+			],
+			[
+				"get",
+				"getFolderValues"
+			],
+			[
+				"imag",
+				"imageUrlBase"
+			],
+			[
+				"univer",
+				"universal-scripts.ejs"
+			],
+			[
+				"pa",
+				"parse-item-files.js"
+			],
+			[
+				"api",
+				"apiOptions"
+			],
+			[
+				"image",
+				"imageUrl"
+			],
+			[
+				"getf",
+				"getFilesByTypeAsync"
+			],
+			[
+				"enab",
+				"enableScroll"
+			],
+			[
+				"back",
+				"backgroundColor"
+			],
+			[
+				"qu",
+				"querySelector"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
+				"inl",
+				"inline-flex"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"expan",
+				"expanded-item-slider\t main.css"
+			],
+			[
+				"flex-",
+				"flex-basis"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"font",
+				"font-size\t universal.scss"
+			],
+			[
+				"spa",
+				"space-between"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"row",
+				"row-reverse"
+			],
+			[
+				"fon",
+				"font-size\t universal.scss"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"font-",
+				"font-secondary\t universal.scss"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"sp",
+				"space-between"
+			],
+			[
+				"outter",
+				"outerWidth( value: String or Number ): jQuery\tjQuery - CSS | Dimensions | Manipulation > Style Properties"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"overflow",
+				"overflow-y"
+			],
+			[
+				"array",
+				"arraySignifier"
+			],
+			[
+				"key",
+				"keySignifier"
+			],
+			[
+				"readFil",
+				"readFileAsync"
+			],
+			[
+				"target",
+				"targetParent"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"queue",
+				"queueTicker"
+			],
+			[
+				"console",
+				"description-scrollLeft\tElement"
+			],
+			[
+				"use",
+				"Users/"
+			],
+			[
+				"Meteor",
+				"Meteor.publish\tMeteor.publish(name, fn)"
+			],
+			[
+				"Meteorsu",
+				"Meteor.subscribe\tMeteor.subscribe(name [, arg1, arg2, ... ] [, callbacks])"
+			],
+			[
+				"ove",
+				"overflow-y"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"pre",
+				"preventDefault()\tEvent"
+			],
+			[
+				"getelem",
+				"getElementById(id)\tElement"
+			],
+			[
+				"conso",
+				"console.log()"
+			],
+			[
+				"visi",
+				"visibility\tStyle CSS"
+			],
+			[
+				"getElem",
+				"getElementsByTagName(name)\tElement"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"res",
+				"resize\tEvent"
+			],
+			[
+				"getEle",
+				"getElementsByClassName(names)\tElement"
+			],
+			[
+				"tra",
+				"transition"
+			],
+			[
+				"getele",
+				"getElementsByClassName(names)\tElement"
+			],
+			[
+				"getEleme",
+				"getElementsByClassName(names)\tElement"
+			],
+			[
+				"getElements",
+				"getElementsByTagName(name)\tElement"
+			],
+			[
+				"chil",
+				"firstChild\tNode"
+			],
+			[
+				"getel",
+				"getElementsByClassName(names)\tElement"
+			],
+			[
+				"cons",
+				"console.log()"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SASS Build/SASS - Compressed.sublime-build",
+					""
+				],
+				[
+					"Packages/SASS Build/SASS.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/SASS Build/SASS.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 131.0,
+		"last_filter": "project close",
+		"selected_items":
+		[
+			[
+				"project close",
+				"Project: Close"
+			],
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"project ",
+				"Project Manager: Open Project"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"for",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"for ",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"react",
+				"Set Syntax: React JSX"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rename",
+				"ANF: Rename File"
+			],
+			[
+				"prety",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"sub",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"pret",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"comm",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"merge",
+				"Emmet: Merge Lines"
+			],
+			[
+				"comment ",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"1 to",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"emmet 1",
+				"Emmet: Increment Number by 1"
+			],
+			[
+				"lin",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"subcom",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"com",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"ren",
+				"File: Rename"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"from",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				" numb",
+				"Emmet: Decrement Number by 1"
+			],
+			[
+				"li",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"browse",
+				"Browse Mode..."
+			],
+			[
+				"file",
+				"ANF: Rename File"
+			],
+			[
+				"timeo",
+				"Snippet: setTimeout function"
+			],
+			[
+				"sett",
+				"Snippet: setTimeout function"
+			],
+			[
+				"comme",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"settim",
+				"Snippet: setTimeout function"
+			],
+			[
+				"commetnt",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"section",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"sect",
+				"Snippet: Comment - Section header comment"
+			],
+			[
+				"snip",
+				"Snippet: if"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"sass",
+				"SassBeautify"
+			],
+			[
+				"linter",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"emme",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"emmet ",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"toggle lin",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"prettify op",
+				"HTMLPrettify: Set Plugin Options"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"jslin",
+				"JSLint"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"open",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"emmet",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"paack",
+				"Package Control: List Packages"
+			],
+			[
+				"css complete",
+				"CSS Completions: Prune Cache"
+			],
+			[
+				"remove pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"PRV: O",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"fuzzy",
+				"FuzzyFilePath: Show info"
+			],
+			[
+				"1",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"math",
+				"Emmet: Evaluate Math Expression"
+			],
+			[
+				"1 t",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"Snippet: ",
+				"Snippet: ---"
+			],
+			[
+				"form",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"forma",
+				"CodeFormatter: Format Code"
+			],
+			[
+				"text",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"past",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"pastry 1",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"text pastry:",
+				"Text Pastry: From 1 To X"
+			],
+			[
+				"isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			]
+		],
+		"width": 491.0
+	},
+	"console":
+	{
+		"height": 227.0,
+		"history":
+		[
+			"o",
+			"col",
+			"prv",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/James/Projects/theFM",
+		"/Users/James/Projects/theFM/src"
+	],
+	"file_history":
+	[
+		"/Users/James/Projects/theFM/src/Capture.js",
+		"/Users/James/Projects/theFM/src/MemoryView.js",
+		"/Users/James/Projects/theFM/src/CustomButtons.js",
+		"/Users/James/Projects/theFM/index.ios.js",
+		"/Users/James/Projects/theFM/src/UniversalFunctions.js",
+		"/Users/James/Projects/theFM/node_modules/react-native-router-flux/src/Reducer.js",
+		"/Users/James/Projects/theFM/node_modules/react-native-router-flux/src/Util.js",
+		"/Users/James/Projects/theFM/src/Holes.js",
+		"/Users/James/Projects/theFM/src/MemoryRow.js",
+		"/Users/James/Projects/theFM/src/Shader.js",
+		"/Users/James/Projects/theFM/src/index.android.js",
+		"/Users/James/Projects/theFM/README.md",
+		"/Users/James/Projects/theFM/src/index.ios.js",
+		"/Users/James/Projects/theFM/MemoryView.js",
+		"/Users/James/Projects/theFM/Capture.js",
+		"/Users/James/Projects/theFM/app.json",
+		"/Users/James/Projects/theFM/package.json",
+		"/Users/James/Projects/theFM/MemoryRow.js",
+		"/Users/James/Projects/routed-react/src/components/Form/index.js",
+		"/Users/James/Projects/routed-react/README.md",
+		"/Users/James/Projects/routed-react/src/components/Initial/index.js",
+		"/Users/James/Projects/routed-react/src/components/App/index.js",
+		"/Users/James/Projects/theFM/ios/theFM/Images.xcassets/Contents.json",
+		"/Users/James/Projects/theFM/ios/theFM/Images.xcassets/Launchimage.launchimage/Contents.json",
+		"/Users/James/Desktop/62c10070-189c-11e7-926c-7b4820fa6d43/Contents.json",
+		"/Users/James/Desktop/fizz.py",
+		"/Users/James/Desktop/Timesheet.txt",
+		"/Users/James/Projects/theFM/CustomButtons.js",
+		"/Users/James/Projects/theFM/UniversalFunctions.js",
+		"/Users/James/Projects/theFM/node_modules/gl-react/lib/data/build.js",
+		"/Users/James/Projects/theFM/node_modules/gl-react/lib/createSurface.js",
+		"/Users/James/Projects/theFM/theFM.sublime-project",
+		"/Users/James/Library/Application Support/Sublime Text 3/Local/Session.sublime_session",
+		"/Users/James/Projects/theFM/CameraButton.js",
+		"/Users/James/Projects/theFM/NewShader.js",
+		"/Users/James/Projects/theFM/Shader.js",
+		"/Users/James/Desktop/installNode.bash",
+		"/Users/James/Projects/devops-demo/devops-demo.sql",
+		"/Users/James/Desktop/Design/Clients/SOCA/To Be Numbered/checkimages.pl",
+		"/Users/James/Desktop/Design/Clients/SOCA/To Be Numbered/launch.command",
+		"/Users/James/Projects/theFM/Holes.js",
+		"/Users/James/Projects/theFM/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js",
+		"/Users/James/Projects/theFM/node_modules/react-native/packager/react-packager/src/Resolver/polyfills/require.js",
+		"/Users/James/Projects/theFM/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/reconciler/ReactMultiChild.js",
+		"/Users/James/Projects/theFM/node_modules/react-native/Libraries/ReactNative/YellowBox.js",
+		"/Users/James/Desktop/ARM334-381.csv",
+		"/Users/James/Projects/sixfold/templating/index.jade",
+		"/Users/James/Projects/sixfold/templating/item.jade",
+		"/Users/James/Desktop/Design/Resume/HR.rtf",
+		"/Users/James/Library/Developer/CoreSimulator/Devices/FC21A5D9-A69A-4689-95C8-F1E72AA21694/data/Containers/Data/Application/027F50D5-7DD6-48DF-BD22-4C45C5E603E8/Documents/RCTAsyncLocalStorage_V1/manifest.json",
+		"/Users/James/Projects/theFM/Saturation.js",
+		"/Users/James/Desktop/memory/commands",
+		"/Users/James/Projects/theFM/SweeneyQuestions.txt",
+		"/Users/James/Projects/theFM/HueRotate.js",
+		"/Users/James/Projects/theFM/node_modules/gl-react/lib/Node.js",
+		"/Users/James/Projects/theFM/HelloGL.js",
+		"/Users/James/Library/Developer/CoreSimulator/Devices/FC21A5D9-A69A-4689-95C8-F1E72AA21694/data/Containers/Data/Application/431666CE-6905-485B-B5E3-3BCCD70707D0/Documents/test64.jpg",
+		"/Users/James/Library/Developer/CoreSimulator/Devices/FC21A5D9-A69A-4689-95C8-F1E72AA21694/data/Containers/Data/Application/431666CE-6905-485B-B5E3-3BCCD70707D0/Documents/RCTAsyncLocalStorage_V1/manifest.json",
+		"/Users/James/Projects/theFM/node_modules/gl-react-native/src/GLCanvas.js",
+		"/Users/James/Desktop/CHR001-099.csv",
+		"/Users/James/Desktop/CHR100-190.csv",
+		"/Users/James/Desktop/ARM285-333.csv",
+		"/Users/James/Projects/theFM/ios/theFM/Info.plist",
+		"/Users/James/Projects/theFM/node_modules/react-proxy/modules/createPrototypeProxy.js",
+		"/Users/James/Projects/theFM/HelloPage.js",
+		"/Users/James/Projects/testReactNative/index.ios.js",
+		"/Users/James/Projects/testReactNative/package.json",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/CustomComponents/ListView/ListViewDataSource.js",
+		"/Users/James/Projects/testReactNative/tester.js",
+		"/Users/James/Library/Application Support/Sublime Text 3/Packages/SublimeCodeIntel/SublimeCodeIntel.sublime-settings",
+		"/Users/James/Library/Application Support/Sublime Text 3/Packages/JavaScript Completions/javascript_completions/JavaScript-Completions.sublime-settings",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/BatchedBridge/MessageQueue.js",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/BatchedBridge/NativeModules.js",
+		"/Users/James/Desktop/Deadlock Simulation/b1.dat",
+		"/Users/James/Desktop/Deadlock Simulation/b0.dat",
+		"/Users/James/Desktop/Deadlock.txt",
+		"/Users/James/Desktop/sched/scheduling.conf",
+		"/Users/James/Desktop/sched/Summary-Results",
+		"/Users/James/Desktop/Writeup.txt",
+		"/Users/James/Desktop/sched/Summary-Processes",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/event/EventPluginHub.js",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/reconciler/ReactCompositeComponent.js",
+		"/Users/James/Desktop/kill.sh",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/reconciler/ReactReconciler.js",
+		"/Users/James/Library/LaunchAgents/com.adobe.AAM.Updater-1.0.plist",
+		"/Library/LaunchAgents/com.adobe.AAM.Updater-1.0.plist",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/ReactNative/AppRegistry.js",
+		"/Users/James/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Renderer/src/renderers/shared/stack/event/EventPluginUtils.js",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Components/Touchable/Touchable.js",
+		"/Users/James/Desktop/Bureau_Grot-Wide_Ultra_Black_unobfuscated_FCJwWYx.otf",
+		"/Users/James/Projects/testReactNative/ios/testReactNative/Info.plist",
+		"/Users/James/Projects/testReactNative/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js",
+		"/Users/James/Desktop/test copy.pl",
+		"/Users/James/Desktop/test.perl copy",
+		"/Users/James/Desktop/dog.html",
+		"/Users/James/Desktop/getter.pl",
+		"/Users/James/Desktop/dog.txt",
+		"/Users/James/Desktop/getter.perl",
+		"/Users/James/Desktop/getter.perl.txt",
+		"/Users/James/Projects/sixfold/views/css/item-colors.css",
+		"/Users/James/Projects/sixfold/views/partials/item.ejs",
+		"/Users/James/Projects/sixfold/templating/js/main.js",
+		"/Users/James/Projects/sixfold/item-colors.js",
+		"/Users/James/Projects/sixfold/config-private.js",
+		"/Users/James/Projects/sixfold/index.js",
+		"/Users/James/Projects/daily-log/entries/20170110.md",
+		"/Users/James/Projects/daily-log/logs/20170110.md",
+		"/Users/James/Desktop/test.perl",
+		"/Users/James/Projects/ask-the-eight/index.js",
+		"/Users/James/Projects/ask-the-eight/templating/js/main.js",
+		"/Users/James/Projects/asktheeight/templating/index.jade",
+		"/Users/James/Projects/asktheeight/templating/scss/universal.scss",
+		"/Users/James/Projects/asktheeight/templating/js/main.js",
+		"/Users/James/Projects/asktheeight/package.json",
+		"/Users/James/Projects/tests/templating/scss/universal.scss",
+		"/Users/James/Projects/tests/templating/public/css/main.css",
+		"/Users/James/Projects/tests/package.json",
+		"/Users/James/Projects/tests/templating/public/js/main.js",
+		"/Users/James/Projects/tests/templating/public/index.html",
+		"/Users/James/Projects/jamesarmenta.github.io/js/home.js",
+		"/Users/James/Projects/jamesarmenta.github.io/index.html",
+		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.7CFB62FE-C088-4F24-A7BE-CFC9F59F316D/venmo_launcher.py",
+		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.0636E3AA-120F-4607-B68A-50B49175CEC8/action.php",
+		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.0636E3AA-120F-4607-B68A-50B49175CEC8/main.php",
+		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.0636E3AA-120F-4607-B68A-50B49175CEC8/callback.php",
+		"/Users/James/Projects/sixfold/views/partials/about.ejs",
+		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.7CFB62FE-C088-4F24-A7BE-CFC9F59F316D/venmo_launcher.pyc"
+	],
+	"find":
+	{
+		"height": 66.0
+	},
+	"find_in_files":
+	{
+		"height": 146.0,
+		"where_history":
+		[
+			"<open files>",
+			"/Users/James/Projects/sixfold/",
+			"<open files>",
+			"/Users/James/Projects/sixfold/assets/items/",
+			"/Users/James/Projects/sixfold/assets/items/-*.md",
+			"/Users/James/Projects/sixfold/assets/items/*.md",
+			"/Users/James/Desktop/School/Sixfold Symmetry/images/Grace DeGennaro/",
+			"/Users/James/Desktop/School/Sixfold Symmetry/images/Grace DeGennaro"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"listBut",
+			"actionsObject",
+			"list",
+			"\\./resources",
+			"resou",
+			"./",
+			"ref",
+			"-40",
+			"-20",
+			"photo",
+			"searchInterval",
+			"fieldEditor1",
+			"-",
+			"listButton",
+			"ListButton",
+			"listButton",
+			"ListButton",
+			"listButton",
+			"ListButton",
+			"viewed",
+			"width",
+			"viewed",
+			"hands",
+			"@2x",
+			"getall",
+			"class",
+			"camera",
+			"Camera",
+			"TouchableHighlightWithoutFeedback",
+			"TouchableHighlight",
+			"width: Dimensions.width",
+			"hole",
+			"meNew",
+			"holetwo",
+			"if",
+			"abv",
+			".",
+			"4",
+			"3",
+			"5.0",
+			"hole2",
+			"offset1",
+			"offset2",
+			"2",
+			"h1",
+			"1",
+			"blur(uv)",
+			"1",
+			"2",
+			"+",
+			"u_texture",
+			"1",
+			"point",
+			"h",
+			"const",
+			"r",
+			"/2",
+			"r",
+			"offset",
+			"Image",
+			"image",
+			"hole",
+			"imagePath",
+			"memoryImage",
+			"image",
+			"this.props.imagePath",
+			"data",
+			"state",
+			"\"",
+			"HueRotate",
+			"offset",
+			"(Math",
+			"(Math.random()",
+			"offset2",
+			"Offset2",
+			"capture",
+			"ref",
+			"Saturation",
+			"amount",
+			"hstep",
+			"u_texture",
+			"above",
+			"1.5",
+			"tex0",
+			"tcoord",
+			"1.1,",
+			"above",
+			"0.5",
+			"1.0",
+			"HueRotate",
+			"\"",
+			"memoryRow",
+			"console",
+			"View",
+			"props",
+			"MemoryRow",
+			"onpress",
+			"getMemory",
+			"console",
+			"allmemories",
+			"create",
+			"ponchoand",
+			"/02/23/",
+			"\"",
+			"data",
+			"center",
+			"project",
+			"dataSource",
+			"data",
+			"Data",
+			"data",
+			"animal",
+			"_Bear",
+			"Whale_trailer_Woody_",
+			"dataUrl",
+			"name",
+			"https.*?playManifest.*?https",
+			"0_rhu6ezi0",
+			"build",
+			"80%",
+			"DINGUS",
+			"255",
+			"rgba(255,255,255,1)",
+			"items[index].lastVisit - new Date().getTime()",
+			"averageVisitDuration",
+			"stats",
+			"visit",
+			"date"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": true,
+		"replace_history":
+		[
+			"../resources",
+			"../resources/",
+			"",
+			"http://ponchoand",
+			"/02/22/",
+			"_Bear_Surfboards",
+			"",
+			"90%",
+			"<br><br>",
+			"<br>",
+			"curator\\nJosh Ness",
+			"curator\\nElizabeth Macy",
+			"curator\\nLisa Aronson",
+			"curator\\nMichael Eckmann",
+			"curator\\nSarah Sweeney",
+			"curator\\nRachel Seligman",
+			"curator\\nRachel Roe-Dale",
+			"curator\\nGregory Spinner",
+			"$1;}",
+			"1px 1px 1px $1, -1px -1px 1px $1, 1px -1px 1px $1, -1px 1px 1px $1,",
+			"1px 1px 1px",
+			"## curator",
+			"'",
+			"",
+			"<br><a href",
+			"\\\\\"_blank\\\\\"",
+			"\\\"_blank\\\"",
+			"name: $1",
+			"<br>",
+			"$1\\n",
+			".$1",
+			"CHANGED",
+			"#$1\\n#* cosmos-0",
+			"## $1",
+			"## ",
+			"##images\\n#*\\n\\n##body",
+			"##images\\n#*\\n\\n##description",
+			"- - - \\n##artist",
+			"##faculty\\nR. Seligman",
+			"",
+			"## images",
+			"",
+			"-",
+			"",
+			" ~*~",
+			" ",
+			"true",
+			"color: $color-grey",
+			"",
+			"<a href=\"#\"><div class=\"wolftitle\">",
+			"window.inner",
+			"height",
+			"wolfmusic",
+			"#",
+			"javascript:void(0);",
+			"#",
+			"wolfparent",
+			"wrapperNumber",
+			"wolf-preview",
+			"wolf",
+			"wolves",
+			"2",
+			"mouseY",
+			"mouseX",
+			"p>",
+			"<span class=\"subtitle\">",
+			"#ddaabb",
+			"#ffddee",
+			"#ff2233",
+			"canvas",
+			"ref=\"javascript:void(0);\"",
+			"9FB8E5<!--D0D0FF-->",
+			"9BB0F0<!--D0D0FF-->",
+			"",
+			"\\n",
+			"",
+			"\\n",
+			"",
+			"Longitude",
+			"oint d =",
+			"destination",
+			"Latitude",
+			"latitude",
+			"90",
+			"180",
+			"longitude",
+			"Longitude",
+			"Destination",
+			"destination",
+			"180",
+			"longitude"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 63.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 140.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "",
+	"project": "theFM.sublime-project",
+	"replace":
+	{
+		"height": 106.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Projects/asktheeight/package.json"
+			],
+			[
+				"mixin",
+				"Projects/sixfold/templating/scss/mixins.scss"
+			],
+			[
+				"reset.scss",
+				"Projects/sixfold/templating/scss/reset.scss"
+			],
+			[
+				"mix",
+				"Projects/sixfold/templating/scss/mixins.scss"
+			],
+			[
+				"glitch",
+				"Projects/threejs/examples/js/shaders/DigitalGlitch.js"
+			],
+			[
+				"main",
+				"lazerwolvez/js/main.js"
+			],
+			[
+				"digital",
+				"Desktop/three.js webgl - postprocessing - digital glitch_files/DigitalGlitch.js"
+			],
+			[
+				"advac",
+				"Projects/threejs/examples/webgl_postprocessing_advanced.html"
+			],
+			[
+				"advanced",
+				"Projects/threejs/examples/webgl_clipping_advanced.html"
+			],
+			[
+				"1gl",
+				"Projects/threejs/examples/1glitch.htm"
+			],
+			[
+				"index",
+				"lazerwolvez/index.html"
+			],
+			[
+				"about",
+				"lazerwolvez/about.html"
+			],
+			[
+				"postp",
+				"Projects/threejs/examples/webgl_postprocessing.html"
+			],
+			[
+				"old",
+				"lazerwolvez/.sass-cache/54bd81ad263440b01faa92ad0d66083c4aa40d7b/old_about.scssc"
+			],
+			[
+				"1",
+				"Projects/threejs/examples/1fromscratch.html"
+			],
+			[
+				"fromscra",
+				"Projects/threejs/examples/1fromscratch.html"
+			],
+			[
+				"1from",
+				"Projects/threejs/examples/1fromscratch.html"
+			],
+			[
+				"lazerwolve",
+				"lazerwolvez/index.html"
+			],
+			[
+				"lazerwolv",
+				"lazerwolvez/about.html"
+			],
+			[
+				"webgl_effects",
+				"Projects/threejs/examples/webgl_effects_anaglyph.html"
+			],
+			[
+				"lava",
+				"Desktop/threejs/examples/webgl_shader_lava.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/Default.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 385.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 493.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 156.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

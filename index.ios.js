@@ -17,15 +17,15 @@ import { Actions, Scene, Router, ActionConst } from 'react-native-router-flux';
 const RNFS = require('react-native-fs');
 
 //UNIVERSAL FUNCTIONS
-import { getAllMemories } from './UniversalFunctions.js';
+import { getAllMemories } from './src/UniversalFunctions.js';
 
 //UI
-import { CameraButton, ListButton } from './CustomButtons.js';
-import MemoryRow from './MemoryRow';
+import { CameraButton, ListButton } from './src/CustomButtons.js';
+import MemoryRow from './src/MemoryRow';
 
 //PAGES
-import MemoryView from './MemoryView';
-import Capture from './Capture';
+import MemoryView from './src/MemoryView';
+import Capture from './src/Capture';
 
 //HOME PAGE
 class Home extends Component {
@@ -42,7 +42,7 @@ class Home extends Component {
         resizeMode={"cover"}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <CameraButton style={{alignSelf: 'center'}}/>
-            <ListButton style={{alignSelf: 'center'}}/>
+            <ListButton style={{alignSelf: 'center'}} action={()=>{Actions.memories({type: ActionConst.RESET})}}/>
         </View>
         </Image>
       </View>
