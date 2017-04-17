@@ -49,15 +49,15 @@ void main() {
   vec4 h3 = texture2D(holethree,vec2(uv.x+offset2,uv.y+offset));
 
   //ghosting??
-  vec4 abv = texture2D(image,vec2(uv.x,uv.y+random));
+  vec4 abv = texture2D(image,vec2(uv.x,uv.y+offset3));
   float abvSum = abv.r + abv.g + abv.b;
   float cSum = c.r + c.g + c.b;
 
-  if(abvSum>cSum&&abvSum>2.7){final = final*1.005;}
+  if(abvSum>cSum&&abvSum>2.7){final = final+.01;}
 
   if((h1.r<0.1 && h1.a>0.1) || (h2.r<0.1 && h2.a>0.1) || (h3.r<0.1 && h3.a>0.1)){
     //blur
-    final = blur(uv)*(1.0+random/2.0);
+    final = blur(uv)+(random/2.0);
   }
 
   gl_FragColor = final;

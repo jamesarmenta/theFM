@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
   creationDate: {
     flex: 1,
-    padding: 16,
+    padding: 12,
     paddingTop: 24,
     paddingRight: 0,
     fontSize: 24,
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     borderColor: '#B6B5B5'
   },
   times: {
-    width: 130, 
+    minWidth: 100, 
     alignSelf: 'center',
     padding: 16,
     fontSize: 24,

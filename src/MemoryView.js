@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 2.6,
     alignSelf: 'flex-end',
     textAlign: 'left',
-    marginTop: 20,
+    marginTop: 30,
     marginRight: 36,
     fontSize: 14,
     backgroundColor: 'rgba(0,0,0,0)',
@@ -37,7 +37,7 @@ const dateFormat = {
   minute: "2-digit"
 }
 
-let imageSize = parseInt(Dimensions.get('window').width * .90);
+let imageSize = parseInt(Dimensions.get('window').width * .9);
 
 const blankHole = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
@@ -51,7 +51,7 @@ class MemoryView extends Component {
       shaderHole: HOLES[Math.round(Math.random() * HOLES.length)],
       shaderHole2: HOLES[Math.round(Math.random() * HOLES.length)],
       shaderHole3: HOLES[Math.round(Math.random() * HOLES.length)],
-      memoryViews: parseInt(this.props.viewed) + 1,
+      memoryViews: parseInt(this.props.viewed),
       random: Math.random(),
       offset: Math.random() * 2 - 1
     }
@@ -133,12 +133,12 @@ class MemoryView extends Component {
         {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
       </Text>
 
-      <View style={{position: 'absolute', bottom: 75, alignItems: 'center', alignSelf: 'flex-start', padding: 12}}>
+      <View style={{position: 'absolute', width: Dimensions.get('window').width*.33, height: Dimensions.get('window').height*.3, bottom: Dimensions.get('window').width*.33, alignItems: 'center', alignSelf: 'flex-start'}}>
         <RefreshButton 
           disabled={this.state.refreshDisabled}
-          onPress = {() => {if(!this.state.refreshDisabled){this.refreshMemory()}}}
+          onPress= {() => {if(!this.state.refreshDisabled){this.refreshMemory()}}}
           />
-        <ListButton style={{marginLeft: 10, marginBottom: -20}} action={()=>this.saveAndPop()}/>
+        <ListButton style={{marginLeft: 10, marginBottom: Dimensions.get('window').width*-.06}} action={()=>this.saveAndPop()}/>
         <CameraButton/>
       </View>
     </View>

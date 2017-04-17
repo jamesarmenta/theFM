@@ -81,19 +81,23 @@ class Memories extends Component {
 
   render() {
     return (
-      <View style={{flex: 1, flexDirection: 'column', paddingTop: 10}}>
+      <View style={{flex: 1, flexDirection: 'column'}}>
         <StatusBar hidden={true} />
+
+        <TouchableWithoutFeedback onPress={()=>{Actions.home({type: ActionConst.RESET })}}>
         <Image source={require('./resources/ui/list_header.png')} 
         // height for this image is 'hacky' 
         style={{width: Dimensions.get('window').width, height: Dimensions.get('window').width*.3515, zIndex: 999}}
         resizeMode={'contain'}
         />
+        </TouchableWithoutFeedback>
+
         <View style={{height: Dimensions.get('window').height - 232, borderBottomWidth: 2, borderColor: '#B6B5B5'}}> 
          <ListView
           dataSource={this.state.dataSource}
           renderRow={(data,sectionID,rowID) => <MemoryRow {...{data,rowID}}/>}
           enableEmptySections={true}
-          style={{marginTop: -30, paddingTop: 10, zIndex: 0}}
+          style={{marginTop: Dimensions.get('window').height*-.05, paddingTop: 8, zIndex: 0}}
         />
         </View>
         <Image source={require('./resources/ui/itemlistfooter.png')} style={{position: 'absolute', bottom: 0, width: Dimensions.get('window').width}} />
