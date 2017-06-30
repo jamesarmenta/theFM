@@ -20,6 +20,8 @@ import Camera from 'react-native-camera';
 import { createMemory } from './UniversalFunctions.js';
 const RNFS = require('react-native-fs');
 
+import { CancelButton, CaptureButton, SwitchButton } from './CustomButtons.js';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,7 +31,8 @@ const styles = StyleSheet.create({
   preview: {
     flex: 1,
     maxHeight: Dimensions.get('window').width,
-    width: Dimensions.get('window').width
+    width: Dimensions.get('window').width,
+    backgroundColor: '#f00'
   },
   capture: {
     flex: 0,
@@ -96,9 +99,26 @@ render() {
           type={this.state.cameraType}
           aspect={Camera.constants.Aspect.fill}>
         </Camera>
-        <Text style={styles.capture} onPress={this.takePicture.bind(this)}>CAPTURE</Text>
-        <Text onPress={()=>{this.changeCameraType()}}>[SWITCH]{'\n'}</Text>
-        <Text onPress={()=>Actions.pop({refresh: {}})}>[CANCEL]</Text>
+        <Image source={require('../resources/ui/capture_back.png')} 
+        style={{   width: Dimensions.get('window').width, 
+                    height: Dimensions.get('window').width*.778,
+                    flex: 1,
+                    alignItems: 'center',
+                    justifyContent: 'flex-end'
+                  }}>
+          <View 
+          style={{ height: Dimensions.get('window').height*.1, 
+                    width: Dimensions.get('window').width*.85, 
+                    bottom: Dimensions.get('window').height*.1, 
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                  }}>
+            <CancelButton style={{marginRight: Dimensions.get('window').width*.06}}onPress={()=>Actions.pop({refresh: {}})}/>
+            <CaptureButton onPress={this.takePicture.bind(this)}/>
+            <SwitchButton onPress={()=>{this.changeCameraType()}}/>
+          </View>
+        </Image>
       </View>
   );
 }

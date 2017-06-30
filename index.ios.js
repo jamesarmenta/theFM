@@ -27,6 +27,8 @@ import MemoryRow from './src/MemoryRow';
 import MemoryView from './src/MemoryView';
 import Capture from './src/Capture';
 
+console.disableYellowBox = true;
+
 //HOME PAGE
 class Home extends Component {
   constructor(props) {

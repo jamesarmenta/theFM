@@ -62,11 +62,11 @@ class MemoryView extends Component {
     this.setState({ refreshDisabled: true });
 
     var oldPath = this.state.shaderImage;
-    var newPath = this.state.shaderImage.replace(/\d{0,3}\.jpg$/, (this.state.memoryViews + 1) + '.jpg');
+    var newPath = this.state.shaderImage.replace(/\d{0,3}\..{3}$/, (this.state.memoryViews + 1) + '.png');
     memoryViewed(this.props.date, newPath);
 
     //capture frame, replace current image
-    this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: newPath })
+    this.refs.currentMemory.captureFrame({ type: "png", format: "file", filePath: newPath })
       .then(uri => {
         console.log('newpath:', newPath);
         //alternate case so as to force state update
@@ -98,12 +98,12 @@ class MemoryView extends Component {
   }
 
   saveAndPop = () => {
-    var oldPath = this.state.shaderImage;
-    var newPath = this.state.shaderImage.replace(/\d{0,3}\.jpg$/, (this.state.memoryViews + 1) + '.jpg');
+      var oldPath = this.state.shaderImage;
+    var newPath = this.state.shaderImage.replace(/\d{0,3}\..{3}$/, (this.state.memoryViews + 1) + '.png');
     memoryViewed(this.props.date, newPath);
 
     //capture frame, replace current image
-    this.refs.currentMemory.captureFrame({ type: "jpg", format: "file", filePath: newPath })
+    this.refs.currentMemory.captureFrame({ type: "png", format: "file", filePath: newPath })
       .then(uri => {
         RNFS.unlink(oldPath)
           .then(() => {
