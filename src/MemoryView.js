@@ -18,11 +18,9 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000'
   },
   text: {
-    width: Dimensions.get('window').width / 2.6,
+    position: 'relative',
     alignSelf: 'flex-end',
     textAlign: 'left',
-    marginTop: 30,
-    marginRight: 36,
     fontSize: 14,
     backgroundColor: 'rgba(0,0,0,0)',
     color: '#fff'
@@ -119,7 +117,7 @@ class MemoryView extends Component {
     return (
       <View style={styles.container}>
       <StatusBar hidden={true} />
-      <Image style={{width: imageSize, height: imageSize, marginLeft: (Dimensions.get('window').width - imageSize)/2}} source={{uri: this.state.shaderImage}}>
+      <Image style={{width: imageSize, height: imageSize, marginLeft: (Dimensions.get('window').width - imageSize)/8}} source={{uri: this.state.shaderImage}}>
       <Surface width={imageSize} height={imageSize} ref={"currentMemory"}>
         <HueRotate image={{uri: this.state.shaderImage}} random={this.state.random} offset={this.state.offset} hole={this.state.shaderHole || blankHole} holetwo={this.state.shaderHole2 || blankHole} holethree={this.state.shaderHole3 || blankHole}></HueRotate>
       </Surface>
@@ -127,19 +125,27 @@ class MemoryView extends Component {
 
       <Image style={{position: 'absolute', width: Dimensions.get('window').width, height: Dimensions.get('window').height}} source={require('../resources/ui/memory_view.png')}/>
 
-      <Text style={styles.text}>
-        Refreshed: {this.state.memoryViews} times {'\n\n'}
-        Date Captured: {'\n'}
-        {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
-      </Text>
+      {/*Label Wrapper*/}
+      <View style={{width:Dimensions.get('window').width *.84, flex: 1, justifyContent: 'space-between', flexDirection: 'row', position: 'absolute', bottom: Dimensions.get('window').height*.06, right: Dimensions.get('window').width *.1}}>
+        {/*Buttons*/}
+        <View style={{alignItems: 'center'}}>
+            <RefreshButton 
+              disabled={this.state.refreshDisabled}
+              onPress= {() => {if(!this.state.refreshDisabled){this.refreshMemory()}}}
+              />
+            <ListButton style={{marginLeft: Dimensions.get('window').width*.02, marginTop: Dimensions.get('window').height*.005, marginBottom: Dimensions.get('window').height*-.015, zIndex: 900}} action={()=>this.saveAndPop()}/>
+            <CameraButton style={{zIndex: 100}}/>
+          </View>
 
-      <View style={{position: 'absolute', width: Dimensions.get('window').width*.33, height: Dimensions.get('window').height*.3, bottom: Dimensions.get('window').width*.33, alignItems: 'center', alignSelf: 'flex-start'}}>
-        <RefreshButton 
-          disabled={this.state.refreshDisabled}
-          onPress= {() => {if(!this.state.refreshDisabled){this.refreshMemory()}}}
-          />
-        <ListButton style={{marginLeft: 10, marginBottom: Dimensions.get('window').width*-.06}} action={()=>this.saveAndPop()}/>
-        <CameraButton/>
+        {/*Text & Label*/}
+        <Image style={{alignSelf: 'center', width: Dimensions.get('window').width*.63}} source={require('../resources/ui/memory_view_label.png')}>
+          <Text style={{marginTop: 32, marginLeft: 70, marginRight: 10, fontSize: 12, color: '#fff',backgroundColor: 'rgba(0,0,0,0)'}}>
+            Refreshed: {this.state.memoryViews} times {'\n\n'}
+            Date Captured: {'\n'}
+            {new Date(parseInt(this.props.date)).toLocaleTimeString("en-us", dateFormat)}
+          </Text>
+        </Image>
+
       </View>
     </View>
     );

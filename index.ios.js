@@ -40,10 +40,10 @@ class Home extends Component {
       <View style={{flex: 1, backgroundColor: 'rgba(0,0,0,0)'}}>
         <StatusBar hidden={true} />
         <Image source={require('./resources/ui/default-568h.png')} 
-        style={{width: Dimensions.width, flex: 1, flexDirection: 'column', justifyContent: 'center',  padding:10, paddingTop:30}}  
+        style={{width: Dimensions.width, flex: 1, flexDirection: 'column', justifyContent: 'flex-end',  padding:10, paddingTop:30}}  
         resizeMode={"cover"}>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <CameraButton style={{alignSelf: 'center'}}/>
+        <View style={{flexDirection: 'row', justifyContent: 'space-between', marginBottom: Dimensions.get('window').height*.22}}>
+            <CameraButton style={{alignSelf: 'center', marginLeft: Dimensions.get('window').width*.02, }}/>
             <ListButton style={{alignSelf: 'center'}} action={()=>{Actions.memories({type: ActionConst.RESET})}}/>
         </View>
         </Image>
@@ -85,7 +85,6 @@ class Memories extends Component {
     return (
       <View style={{flex: 1, flexDirection: 'column'}}>
         <StatusBar hidden={true} />
-
         
         <Image source={require('./resources/ui/list_header.png')} 
         // height for this image is 'hacky' 
@@ -96,15 +95,15 @@ class Memories extends Component {
         <View style={{position: 'absolute', width: Dimensions.get('window').width*.2, height: Dimensions.get('window').width*.2, zIndex: 999 }}/>
         </TouchableWithoutFeedback>
 
-        <View style={{height: Dimensions.get('window').height - 232, borderBottomWidth: 2, borderColor: '#B6B5B5'}}> 
+        <View style={{height: Dimensions.get('window').height*.67, borderBottomWidth: 2, borderColor: '#B6B5B5'}}> 
          <ListView
           dataSource={this.state.dataSource}
           renderRow={(data,sectionID,rowID) => <MemoryRow {...{data,rowID}}/>}
           enableEmptySections={true}
-          style={{marginTop: Dimensions.get('window').height*-.05, paddingTop: 8, zIndex: 0}}
+          style={{marginTop: Dimensions.get('window').height*-.05, paddingTop: 8, zIndex: 0,}}
         />
         </View>
-        <Image source={require('./resources/ui/itemlistfooter.png')} style={{position: 'absolute', bottom: 0, width: Dimensions.get('window').width}} />
+        <Image source={require('./resources/ui/itemlistfooter.png')} style={{width: Dimensions.get('window').width}} />
       </View>
     );
   }

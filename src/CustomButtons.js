@@ -24,7 +24,7 @@ export class CameraButton extends Component {
   render() {
     return (
     <TouchableWithoutFeedback  onPress={()=>{this.changeCameraButton(); Actions.capture()}}>
-      <Image source={this.state.cameraButton} style={this.props.style} width={buttonSize*1.1} resizeMode={'contain'}/>
+      <Image source={this.state.cameraButton} style={this.props.style} width={buttonSize*1.25} height={buttonSize*1.25}  resizeMode={'contain'}/>
     </TouchableWithoutFeedback>
     )
   }
@@ -153,7 +153,7 @@ export class SwitchButton extends Component {
   render() {
     return (
     <TouchableWithoutFeedback onPress={()=>{this.changeSwitchButton(); this.props.onPress()}}>
-      <Image source={this.state.switchButton} style={this.props.style} width={buttonSize*1.5} resizeMode={'contain'}/>
+      <Image source={this.state.switchButton} style={this.props.style} width={buttonSize*1.75} resizeMode={'contain'}/>
     </TouchableWithoutFeedback>
     )
   }

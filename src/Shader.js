@@ -15,13 +15,10 @@ uniform sampler2D holethree;
 
 // float rand(vec2 p){return fract(cos(dot(p,vec2(23.14069263277926,2.665144142690225)))*123456.);}
 
-// vec4 avg(vec4 one, vec4 two){
-//   float red = (one.r+two.r)/2.0;
-//   float green = (one.g+two.g)/2.0;
-//   float blue = (one.b+two.b)/2.0;
-
-//   return vec4(red,green,blue,1);
-// }
+float avg(vec4 pixel){
+    float total = pixel[0]+pixel[1]+pixel[2];
+    return total / 3.0;
+}
 
 vec4 blur(vec2 uv){
   vec4 sum = vec4(0,0,0,0);
@@ -59,6 +56,19 @@ void main() {
     //blur
     final = blur(uv)+(random/2.0);
   }
+
+  //pixel sort
+  // if(random < .25 && c[0] > .7){
+  //   vec4 b = texture2D(image, vec2(uv.x, uv.y + random*.05));
+  //   vec4 c = texture2D(image, uv);
+  //   vec4 t = texture2D(image, vec2(uv.x, uv.y - random*.05));
+
+  //   if (avg(b) > avg(c)) {
+  //       final = b;
+  //   } else if (avg(t) < avg(c)) {
+  //       final = t;
+  //   }
+  // }
 
   gl_FragColor = final;
 }

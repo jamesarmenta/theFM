@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"alig",
+				"alignSelf"
+			],
+			[
+				"fle",
+				"flexDirection〔variable〕"
+			],
+			[
+				"a",
+				"absolute"
+			],
+			[
+				"flex",
+				"flex-start"
+			],
+			[
+				"al",
+				"alignItems"
+			],
+			[
+				"pos",
+				"position〔variable〕"
+			],
+			[
 				"refres",
 				"refreshMemory"
 			],
@@ -60,14 +84,6 @@
 				"ui/"
 			],
 			[
-				"al",
-				"align-content"
-			],
-			[
-				"alig",
-				"alignItems〔variable〕"
-			],
-			[
 				"align",
 				"alignSelf〔variable〕"
 			],
@@ -86,10 +102,6 @@
 			[
 				"setT",
 				"setTimeout〔function〕"
-			],
-			[
-				"flex",
-				"flexDirection\tStyle CSS"
 			],
 			[
 				"memory",
@@ -502,31 +514,11 @@
 			[
 				"getElements",
 				"getElementsByTagName(name)\tElement"
-			],
-			[
-				"chil",
-				"firstChild\tNode"
-			],
-			[
-				"getel",
-				"getElementsByClassName(names)\tElement"
-			],
-			[
-				"cons",
-				"console.log()"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/Users/James/Projects/two-factor/index.js",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -896,14 +888,20 @@
 	},
 	"expanded_folders":
 	[
+		"/Users/James/Projects/theFM",
+		"/Users/James/Projects/theFM/src"
 	],
 	"file_history":
 	[
+		"/Users/James/Desktop/grid.js",
+		"/Users/James/Projects/redux/examples/shopping-cart/node_modules/table/dist/drawTable.js",
+		"/Users/James/Projects/theFM/src/MemoryView.js",
+		"/Users/James/Projects/theFM/index.ios.js",
+		"/Users/James/Projects/theFM/src/Shader.js",
+		"/Users/James/Projects/two-factor/index.js",
 		"/Users/James/Projects/splitflap/package.json",
 		"/Users/James/Desktop/ChromePlay-master/manifest.json",
 		"/Users/James/Projects/routed-react/node_modules/react-scripts/scripts/eject.js",
-		"/Users/James/Projects/theFM/src/MemoryView.js",
-		"/Users/James/Projects/theFM/index.ios.js",
 		"/Users/James/Projects/theFM/node_modules/react/lib/onlyChild.js",
 		"/Users/James/Projects/theFM/src/Capture.js",
 		"/Users/James/Projects/theFM/src/CustomButtons.js",
@@ -912,7 +910,6 @@
 		"/Users/James/Projects/theFM/node_modules/react-native-router-flux/src/Util.js",
 		"/Users/James/Projects/theFM/src/Holes.js",
 		"/Users/James/Projects/theFM/src/MemoryRow.js",
-		"/Users/James/Projects/theFM/src/Shader.js",
 		"/Users/James/Projects/theFM/src/index.android.js",
 		"/Users/James/Projects/theFM/README.md",
 		"/Users/James/Projects/theFM/src/index.ios.js",
@@ -1023,10 +1020,7 @@
 		"/Users/James/Projects/tests/package.json",
 		"/Users/James/Projects/tests/templating/public/js/main.js",
 		"/Users/James/Projects/tests/templating/public/index.html",
-		"/Users/James/Projects/jamesarmenta.github.io/js/home.js",
-		"/Users/James/Projects/jamesarmenta.github.io/index.html",
-		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.7CFB62FE-C088-4F24-A7BE-CFC9F59F316D/venmo_launcher.py",
-		"/Users/James/Library/Application Support/Alfred 3/Alfred.alfredpreferences/workflows/user.workflow.0636E3AA-120F-4607-B68A-50B49175CEC8/action.php"
+		"/Users/James/Projects/jamesarmenta.github.io/js/home.js"
 	],
 	"find":
 	{
@@ -1052,6 +1046,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"texture",
+			"iChannel0",
 			"jpg",
 			"100",
 			"Dimensions.get('window').width*.2",
@@ -1177,9 +1173,7 @@
 			"80%",
 			"DINGUS",
 			"255",
-			"rgba(255,255,255,1)",
-			"items[index].lastVisit - new Date().getTime()",
-			"averageVisitDuration"
+			"rgba(255,255,255,1)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1288,48 +1282,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/Users/James/Projects/two-factor/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": ".",
-									"selector": "source.go"
-								},
-								{
-									"characters": ".#",
-									"selector": "text.html"
-								}
-							],
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
